@@ -684,7 +684,7 @@ def run_parse(args):
         reader = csv.reader(input_file, delimiter="\t")
         sentences = []
         #跳过第一行
-        for (i,sentence) in enumerate(sentences):
+        for (i,sentence) in enumerate(reader):
             if i == 0:
                 continue
             sentences = [sentence.strip() for sentence in sentences if len(sentence.strip()) > 0]
